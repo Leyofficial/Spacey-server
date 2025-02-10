@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="documentation.css">
+    <title>API DOCUMENTATION</title>
+</head>
+<body>
+<div class="container">
+    <section class="image-api">
+        <h1>IMAGES</h1>
+        <ul>
+            <li style={{color:red}} class="title">GET <a
+                    href="https://spacey-server.vercel.app/uploads/654c90e4cdcdc15c70ff4eb8"
+                    class="url">https://spacey-server.vercel.app/uploads/${654c90e4cdcdc15c70ff4eb8}</a>
+            </li>
+            <li class="item"><span class="event">data</span> : String
+            </li>
+            <li class="item"><span class="event">status</span> : 200</li>
+        </ul>
+    </section>
+    <section class="category-api">
+        <h1>Category</h1>
+
+        <p style={{color:red}} class="title">GET <a class="url" href="https://spacey-server.vercel.app/api">https://spacey-server.vercel.app/api</a>
+        </p>
+        <div class="category"><span class="event">categories :{</span>
+            <div class="product">product :{
+
+                <div class="images">images : {
+                    <div>restImages: { images : [String] },</div>
+                    <div>mainImage : String,</div>
+                    <div>gray : [String],</div>
+                    <div>lightgray : [String],</div>
+                    },
+                </div>
+
+                <div>size: [String],</div>
+                <div>memory : [String],</div>
+                <div>storage : [String],</div>
+                <div>title: String,</div>
+                <div>price : Number,</div>
+                <div>rating : Number,</div>
+                <div>sale : Boolean,</div>
+                <div>percentageOfSale : Number,</div>
+                <div>description: String</div>
+                <span>},</span>
+            </div>
+
+            <div>_id: String,</div>
+            <div>categoryOfProduct: String,</div>
+            <div>brand: String</div>
+
+            <span class="event">},</span>
+        </div>
+        <div class="item"><span class="event">length</span>: Number,</div>
+        <div class="item"><span class="event">status</span>: String</div>
+    </section>
+    <section>
+        <h1> GET product by query params</h1>
+        <p style={{color:red}} class="title">GET by query param ( brand,category,name,maxPrice , minPrice,status) <a
+                class="url"
+                href="https://spacey-server.vercel.app/api/product?brand=MSI">https://spacey-server.vercel.app/api?category=Laptop&brand=Acer</a>
+
+        <div class="category"><span class="event">foundProduct :{</span>
+            <div class="product">product :{
+
+                <div class="images">images : {
+                    <div>restImages: { images : [String] },</div>
+                    <div>mainImage : String,</div>
+                    <div>gray : [String],</div>
+                    <div>lightgray : [String],</div>
+                    },
+                </div>
+
+                <div>size: [String],</div>
+                <div>memory : [String],</div>
+                <div>storage : [String],</div>
+                <div>title: String,</div>
+                <div>price : Number,</div>
+                <div>rating : Number,</div>
+                <div>sale : Boolean,</div>
+                <div>percentageOfSale : Number,</div>
+                <div>description: String</div>
+                <span>},</span>
+            </div>
+
+            <div>_id: String,</div>
+            <div>categoryOfProduct: String,</div>
+            <div>brand: String</div>
+            <div>length:Number</div>
+
+            <span class="event">},</span>
+        </div>
+        <div class="item"><span class="event">status</span>: String</div>
+    </section>
+    <section>
+        <h1>GET product using ID</h1>
+        <p style={{color:red}} class="title">GET <a class="url"
+                                                    href="https://spacey-server.vercel.app/api/654e8930197da704a0b95933">https://spacey-server.vercel.app/api/${id}</a>
+
+
+    </section>
+    <section>
+        <h1>Authorization</h1>
+
+        <div class="wrapper">
+            <h1 class="action">Login</h1>
+            <p class="method">GET <a href="https://spacey-server.vercel.app/auth?email=admin@gmail.com&password=admin1234" class="path">https://spacey-server.vercel.app/auth?email=admin@gmail.com&password=admin1234</a></p>
+
+            <div>
+                <p>status : String</p>
+                <p>token : String</p>
+                <div class="data-wrapper">
+                    data : {
+                    <p>role : String</p>
+                    <p>_id: String</p>
+                    <p>name : String</p>
+                    <p>email : String</p>
+                    <p>password : String</p>
+                    }
+                </div>
+
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h1 class="action">Sing in</h1>
+            <p class="method"> POST <a href="https://spacey-server.vercel.app/auth" class="path">https://spacey-server.vercel.app/auth</a></p>
+            <h3 class="request">Request BODY</h3>
+            <div class="data-wrapper">
+                <p>name:String,</p>
+                <p>email:String,</p>
+                <p>password:String,</p>
+                <p>passwordConfirm:String</p>
+
+                </div>
+            <h3 class="request">Response</h3>
+            <div>
+                <p>status : String</p>
+                <p>token : String</p>
+                <div class="data-wrapper">
+                    data : {
+                    <p>role : String</p>
+                    <p>_id: String</p>
+                    <p>name : String</p>
+                    <p>email : String</p>
+                    <p>password : String</p>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1>Review</h1>
+
+        <div class="wrapper">
+            <h1 class="action">Create review</h1>
+            <p class="method">POST <a href="https://spacey-server.vercel.app/review" class="path">https://spacey-server.vercel.app/review</a></p>
+            <h3 class="request">Request BODY</h3>
+            <div class="data-wrapper">
+                <p>idAuthor:String,</p>
+                <p>content:String,</p>
+                <p>idProduct:String</p>
+            </div>
+            <h3 class="request">Response</h3>
+            <div>
+                <p>status : String</p>
+                <div class="data-wrapper">
+                    createdReview : {
+                    <p>date : String</p>
+                    <p>_id: String</p>
+                    <p>idAuthor : String</p>
+                    <p>content : String</p>
+                    <p>idProduct : String</p>
+                    }
+                </div>
+
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h1 class="action">GET Reviews for product</h1>
+            <p class="method"> GET <a href="https://spacey-server.vercel.app/review/65532276876fc2378833acb2" class="path">https://spacey-server.vercel.app/review/${idProduct}</a></p>
+            <h3 class="request">Response</h3>
+            <div>
+                <p>status : String</p>
+                <p>length : Number</p>
+                <div class="data-wrapper">
+                    reviews : [{
+                    <p>date : String</p>
+                    <p>_id: String</p>
+                    <p>idAuthor : String</p>
+                    <p>content : String</p>
+                    <p>idProduct : String</p>
+                    }]
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

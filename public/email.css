@@ -1,0 +1,10 @@
+.btnWrapper{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.btn{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
